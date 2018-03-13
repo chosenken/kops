@@ -206,7 +206,7 @@ func (a *AssetStore) addURL(url string, hash *hashing.Hash) error {
 	// normalize filename suffix
 	file := strings.ToLower(assetPath)
 	// pickup both tar.gz and tgz files
-	if strings.HasSuffix(file, ".tar.gz") || strings.HasSuffix(file, ".tgz") {
+	if strings.HasSuffix(file, ".tar.gz") || strings.HasSuffix(file, "tgz") {
 		err = a.addArchive(source, localFile)
 		if err != nil {
 			return err
